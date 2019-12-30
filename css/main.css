@@ -54,7 +54,7 @@ body {
 }
 
 .container header {
-  padding: 0 9rem;
+  padding: 0 15rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
