@@ -25,6 +25,7 @@ body {
 
 .light-200 {
   font-weight: 200;
+  color: lighten($color: black, $amount: 60);
 }
 
 .h-text {
@@ -107,5 +108,94 @@ body {
 
     transform: translateX(24rem);
   }
+
+}
+
+@media (max-width: 1100px) {
+
+  h1,
+  .h-text {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+
+  .container {
+    margin: 2rem auto;
+    max-width: 1100px;
+    padding: 1rem 1.5rem;
+
+    header {
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: .75rem;
+    }
+  }
+
+  .card-container {
+    margin-top: 3rem;
+    display: grid;
+    grid-template:
+      " sup "
+      " team "
+      " karma "
+      " calc "
+    ;
+
+    grid-gap: 3rem;
+    justify-items: center;
+
+    .card-sup {
+      grid-area: sup;
+
+      &::after {
+        background-color: $cyan;
+      }
+
+      transform: translateY(0rem);
+    }
+
+    .card-team {
+      grid-area: team;
+
+      &::after {
+        background-color: $red;
+      }
+    }
+
+    .card-calc {
+      grid-area: calc;
+
+      &::after {
+        background-color: $blue;
+      }
+
+      transform: translateY(0rem);
+    }
+
+    .card-karma {
+      grid-area: karma;
+
+      &::after {
+        background-color: $orange;
+      }
+
+      transform: translateX(0rem);
+    }
+
+    .card {
+      max-width: 380px;
+    }
+
+  }
+
+
+
+
+
 
 }
